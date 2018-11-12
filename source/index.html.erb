@@ -2,6 +2,19 @@
 title: Le Wagon - Middleman
 ---
 
+<%= partial "layouts/_banner.html.erb" %>
+
+<div class="container">
+  <div class="row">
+    <% %w(berlin shanghai paris tokyo rio).each do |city| %>
+    <div class="col-xs-12 col-sm-4">
+      <img src="https://kitt.lewagon.com/placeholder/cities/<%= city %>" class="img-rounded" height="100px" >
+      <p><%= city.capitalize %></p>
+    </div>
+      <% end %>
+  </div>
+</div>
+
 <div id="home">
   <div class="home-content">
     <%= image_tag "logo.png", width: "200" %>
@@ -10,6 +23,10 @@ title: Le Wagon - Middleman
     </p>
     <p class="about">
       <%= link_to "More about this template", "about.html" %>
+    </p>
+
+    <p class="about">
+      <%= link_to "More about the team", "team.html" %>
     </p>
   </div>
 </div>
